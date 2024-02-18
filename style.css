@@ -3,6 +3,18 @@
   src: url(./NeueHaasDisplayMediu.ttf);
 }
 
+@font-face {
+  font-family: neue;
+  font-weight: 100;
+  src: url(./NeueHaasDisplayLight.ttf);
+}
+
+@font-face {
+  font-family: neue;
+  font-weight: 200;
+  src: url(./NeueHaasDisplayRoman.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -177,6 +189,7 @@ nav {
   width: 100%;
   background-color: #efeae3;
   padding: 8vw 0;
+  position: relative;
 }
 
 #moving-text {
@@ -206,7 +219,7 @@ nav {
   height: 70px;
   width: 70px;
   border-radius: 50%;
-  background-color: #fe320a;
+  background-color: #efeae3;
   display: inline-block;
   margin: 1vw 2vw;
 }
@@ -217,5 +230,70 @@ nav {
   }
   to {
     transform: translateX(-100%);
+  }
+}
+
+#page2-bottom {
+  height: 80vh;
+  width: 100%;
+  /* background-color: aliceblue; */
+  padding: 4.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 9;
+}
+
+#page2-bottom h1 {
+  font-size: 4vw;
+  width: 60%;
+  line-height: 4vw;
+}
+
+#bottom-part2 {
+  width: 20%;
+  /* background-color: aqua; */
+}
+
+#bottom-part2 img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+#bottom-part2 p {
+  font-weight: 200;
+  margin-top: 2vw;
+  font-size: 1vw;
+}
+
+#page2 #gooey {
+  height: 32vw;
+  width: 32vw;
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(to top right, #fe320a, #f86e11);
+  top: 58%;
+  left: 25%;
+  filter: blur(20px);
+  animation: gooey;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+#page3 {
+  height: 100vh;
+  width: 100%;
+  background-color: #efeae3;
+}
+
+@keyframes gooey {
+  from {
+    transform: translate(10%, -10%) skew(0);
+  }
+  to {
+    transform: translate(-10%, 10%) skew(10deg);
   }
 }
