@@ -284,7 +284,7 @@ nav {
 }
 
 #page3 {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: #efeae3;
   padding: 4vw 0;
@@ -302,7 +302,7 @@ nav {
 .elem {
   height: 150px;
   width: 100%;
-  border-bottom: 0.1px solid #5f5c5c;
+  border-bottom: 0.1px solid #0000006b;
   position: relative;
   display: flex;
   align-items: center;
@@ -323,9 +323,22 @@ nav {
   position: absolute;
   left: 0;
   top: -100%;
-  transition: all ease 0.3s;
+  transition: all ease 0.2s;
 }
 
 .elem:hover .overlay {
   top: 0;
+}
+
+#fixed-image {
+  height: 29vw;
+  width: 23vw;
+  border-radius: 10px;
+  position: fixed;
+  z-index: 9;
+  left: 50%;
+  top: 25%;
+  display: none;
+  background-size: cover;
+  background-position: center;
 }
