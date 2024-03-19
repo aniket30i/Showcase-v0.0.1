@@ -219,7 +219,7 @@ nav {
   height: 70px;
   width: 70px;
   border-radius: 50%;
-  background-color: #efeae3;
+  background-color: #f15309;
   display: inline-block;
   margin: 1vw 2vw;
 }
@@ -296,4 +296,36 @@ nav {
   to {
     transform: translate(-10%, 10%) skew(10deg);
   }
+}
+
+.elem {
+  height: 150px;
+  width: 100%;
+  border-top: 0.1px solid #000;
+  border-bottom: 0.1px solid #000;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 2vw;
+  overflow: hidden;
+}
+
+.elem h2 {
+  font-size: 3vw;
+  position: relative;
+  z-index: 9;
+}
+
+.elem .overlay {
+  height: 100%;
+  width: 100%;
+  background-color: orange;
+  position: absolute;
+  left: 0;
+  top: -100%;
+  transition: all ease 0.3s;
+}
+
+.elem:hover .overlay {
+  top: 0;
 }
